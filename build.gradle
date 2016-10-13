@@ -1,0 +1,24 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: "jacoco"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.14.8'
+    testCompileOnly 'org.projectlombok:lombok:1.14.8'
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+idea {
+    module {
+        scopes.COMPILE.plus += [configurations.compileOnly]
+    }
+}
+
+test.finalizedBy jacocoTestReport
