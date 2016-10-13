@@ -18,4 +18,9 @@ public class Subject {
     public void subscriber(Subscriber subscriber) {
         this.subscribers.add(subscriber);
     }
+
+    public void tell(String message) {
+        subscribers.stream()
+                .forEach(subscriber -> subscriber.handleMessage(message));
+    }
 }

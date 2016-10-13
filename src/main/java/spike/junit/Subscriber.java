@@ -10,4 +10,8 @@ public class Subscriber {
     public String getName() {
         return name;
     }
+
+    public void handleMessage(String message) {
+        //omit very complex handling which requires external dependencies (message broker, database, to name a few)
+    }
 }
