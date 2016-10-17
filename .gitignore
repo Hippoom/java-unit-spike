@@ -4,5 +4,9 @@
 
 #gradle
 build
+.gradle
+
+#maven
+target
 
 #local
