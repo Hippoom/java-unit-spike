@@ -41,4 +41,14 @@ public class JunitInteractionSpike {
         verify(tom).handleMessage(message);
         verify(jerry).handleMessage(message);
     }
+
+    //@Test
+//    public void shouldTellEverySubscriberToShutDown() {
+//
+//    }
+
+//    @Test
+//    public void shouldTellIfAnySubscriberAlive() {
+//
+//    }
 }
